@@ -1,0 +1,72 @@
+<%= form_with(model: lesson, local: true) do |form| %>
+  <% if lesson.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(lesson.errors.count, "error") %> prohibited this lesson from being saved:</h2>
+
+      <ul>
+        <% lesson.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :technology_name %>
+    <%= form.text_field :technology_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :lesson_author %>
+    <%= form.text_field :lesson_author %>
+  </div>
+
+  <div class="field">
+    <%= form.label :lesson_title %>
+    <%= form.text_field :lesson_title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :lesson_purpose %>
+    <%= form.text_field :lesson_purpose %>
+  </div>
+
+  <div class="field">
+    <%= form.label :lesson_question %>
+    <%= form.text_field :lesson_question %>
+  </div>
+
+  <div class="field">
+    <%= form.label :lesson_answer %>
+    <%= form.text_area :lesson_answer %>
+  </div>
+
+  <div class="field">
+    <%= form.label :lesson_body %>
+    <%= form.text_area :lesson_body %>
+  </div>
+
+  <div class="field">
+    <%= form.label :lesson_snippet %>
+    <%= form.text_area :lesson_snippet %>
+  </div>
+
+  <div class="field">
+    <%= form.label :lesson_example %>
+    <%= form.text_area :lesson_example %>
+  </div>
+
+  <div class="field">
+    <%= form.label :lesson_link %>
+    <%= form.text_field :lesson_link %>
+  </div>
+
+  <div class="field">
+    <%= form.label :lesson_rating %>
+    <%= form.text_area :lesson_rating %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

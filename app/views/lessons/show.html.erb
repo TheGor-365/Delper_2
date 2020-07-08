@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Technology name:</strong>
+  <%= @lesson.technology_name %>
+</p>
+
+<p>
+  <strong>Lesson author:</strong>
+  <%= @lesson.lesson_author %>
+</p>
+
+<p>
+  <strong>Lesson title:</strong>
+  <%= @lesson.lesson_title %>
+</p>
+
+<p>
+  <strong>Lesson purpose:</strong>
+  <%= @lesson.lesson_purpose %>
+</p>
+
+<p>
+  <strong>Lesson question:</strong>
+  <%= @lesson.lesson_question %>
+</p>
+
+<p>
+  <strong>Lesson answer:</strong>
+  <%= @lesson.lesson_answer %>
+</p>
+
+<p>
+  <strong>Lesson body:</strong>
+  <%= @lesson.lesson_body %>
+</p>
+
+<p>
+  <strong>Lesson snippet:</strong>
+  <%= @lesson.lesson_snippet %>
+</p>
+
+<p>
+  <strong>Lesson example:</strong>
+  <%= @lesson.lesson_example %>
+</p>
+
+<p>
+  <strong>Lesson example:</strong>
+  <%= @lesson.lesson_link %>
+</p>
+
+<p>
+  <strong>Lesson example:</strong>
+  <%= @lesson.lesson_rating %>
+</p>
+
+<%= link_to 'Edit', edit_lesson_path(@lesson) %> |
+<%= link_to 'Back', lessons_path %>

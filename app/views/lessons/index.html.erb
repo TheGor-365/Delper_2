@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Lessons</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Technology name</th>
+      <th>Lesson author</th>
+      <th>Lesson title</th>
+      <th>Lesson purpose</th>
+      <th>Lesson question</th>
+      <th>Lesson answer</th>
+      <th>Lesson body</th>
+      <th>Lesson snippet</th>
+      <th>Lesson example</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @lessons.each do |lesson| %>
+      <tr>
+        <td><%= lesson.technology_name %></td>
+        <td><%= lesson.lesson_author %></td>
+        <td><%= lesson.lesson_title %></td>
+        <td><%= lesson.lesson_purpose %></td>
+        <td><%= lesson.lesson_question %></td>
+        <td><%= lesson.lesson_answer %></td>
+        <td><%= lesson.lesson_body %></td>
+        <td><%= lesson.lesson_snippet %></td>
+        <td><%= lesson.lesson_example %></td>
+        <td><%= lesson.lesson_link %></td>
+        <td><%= lesson.lesson_rating %></td>
+        <td><%= link_to 'Show', lesson %></td>
+        <td><%= link_to 'Edit', edit_lesson_path(lesson) %></td>
+        <td><%= link_to 'Destroy', lesson, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Lesson', new_lesson_path %>

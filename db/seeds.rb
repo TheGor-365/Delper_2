@@ -5,3 +5,10 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+@technology = Technology.create([{
+  name: 'Ruby',
+  purpose: 'Web development',
+  describe: 'Script programming language',
+  technology_documentation_link: 'https://docs.ruby-lang.org/en/',
+  technology_rating: 7
+}])

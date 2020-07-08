@@ -10,14 +10,30 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_07_08_185954) do
+ActiveRecord::Schema.define(version: 2020_07_08_195836) do
+
+  create_table "lessons", force: :cascade do |t|
+    t.string "technology_name"
+    t.string "lesson_author"
+    t.string "lesson_title"
+    t.string "lesson_purpose"
+    t.string "lesson_question"
+    t.text "lesson_answer"
+    t.text "lesson_body"
+    t.text "lesson_snippet"
+    t.text "lesson_example"
+    t.string "lesson_link"
+    t.string "lesson_rating"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "technologies", force: :cascade do |t|
     t.string "name"
     t.string "purpose"
     t.text "describe"
-    t.string "doc_link"
-    t.integer "rating"
+    t.string "technology_documentation_link"
+    t.integer "technology_rating"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

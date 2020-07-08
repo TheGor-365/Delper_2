@@ -4,8 +4,8 @@ class CreateTechnologies < ActiveRecord::Migration[6.0]
       t.string :name
       t.string :purpose
       t.text :describe
-      t.string :doc_link
-      t.integer :rating
+      t.string :technology_documentation_link
+      t.integer :technology_rating
 
       t.timestamps
     end
