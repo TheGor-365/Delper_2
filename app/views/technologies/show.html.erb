@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @technology.name %>
+</p>
+
+<p>
+  <strong>Purpose:</strong>
+  <%= @technology.purpose %>
+</p>
+
+<p>
+  <strong>Describe:</strong>
+  <%= @technology.describe %>
+</p>
+
+<p>
+  <strong>Doc link:</strong>
+  <%= @technology.doc_link %>
+</p>
+
+<p>
+  <strong>Rating:</strong>
+  <%= @technology.rating %>
+</p>
+
+<%= link_to 'Edit', edit_technology_path(@technology) %> |
+<%= link_to 'Back', technologies_path %>
